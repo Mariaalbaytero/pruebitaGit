@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*estilos para todos los html*/
+body {
+    background-color: rgb(135, 154, 238);
+}
+
+header {
+    background-image: url(../img/header.jpg);
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    padding-top: 10px;
+    font-size: 60px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+nav {
+    margin: 5px;
+    padding: 0px 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul li {
+    background-repeat: no-repeat;
+    margin: 10px;
+    padding-bottom: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    list-style-type: none;
+    font-size: 1.2rem;
+}
+
+nav ul li:hover {
+    color: grey;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover {
+    color: grey;
+}
+
+main h2 {
+    color: rgb(12, 53, 107);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 20px;
+    text-decoration: underline;
+}
+
+main p {
+    margin: 13px;
+    font-size: 1.rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+main img {
+    margin: 50px;
+}
+
+footer {
+    background-image: url(../img/header.jpg);
+}
+
+footer h3 {
+    margin: 10px;
+    padding: 10px;
+}
+
+/*estilos del index*/
+.mainIndex {
+    display: grid;
+}
+
+.contenedorUnoIndex {
+    align-items: start;
+}
+
+.contenedorDosIndex {
+    align-items: end;
+    justify-content: center;
+}
+
+.fotoIndex {
+    width: 30rem;
+    grid-area: img;
+}
+
+.imgOcultaIndex {
+    display: none;
+}
+
+.pUno {
+    grid-area: pUno
+}
+
+.pDos {
+    grid-area: pDos;
+}
+
+/* estilos de discografia*/
+.mainDiscografia {
+    margin: 10px;
+}
+
+.tituloDiscografia {
+    text-align: end;
+}
+
+.sectionDiscografia {
+    display: grid
+}
+
+.divCaravana {
+    justify-self: center;
+    margin: 0.2rem
+}
+
+.divOscuroExtasis {
+    justify-self: center;
+    margin: 0.2rem
+}
+
+.divArrancarmelo {
+    justify-self: center;
+    margin: 0.2rem
+}
+
+/*shows*/
+.tituloShows {
+    text-align: end;
+}
+
+.h2Tour {
+    text-align: center;
+    margin-bottom: -20px;
+    color: rgb(47, 55, 65) ;
+}
+
+.padreImgShows {
+    display: grid;
+}
+
+.imgShows {
+    justify-self: center;
+}
+
+.padreShowsLista {
+    display: grid;
+    margin: 2.5rem;
+}
+
+.showsLista {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    justify-self: center;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+
+/*estilos de galeria*/
+.tituloGaleria{
+    text-align: end;
+}
+
+.contenedorimagenes{
+    display: grid;
+}
+
+.imgBailando{
+    grid-area: bailando;
+}
+.imgMdp{
+    grid-area: mdp;
+}
+.imgQuintoEscalon{
+    grid-area: Quinto
+}
+.imgLollaVeintidos{
+    grid-area: lollaVeintidos;
+}
+.imgRedBull{
+    grid-area: redBull;
+}
+.imgLollaDiecinueve{
+    grid-area: lollaDiecinueve;
+}
+
+/*contactanos*/
+.h2Contactanos {
+    text-align: center;
+}
+
+.formulario {
+    text-align: center;
+    margin: 0px 150px;
+}
+
+/*media queries*/
+@media screen and (min-width:600px) {
+
+    /*index*/
+    .mainIndex {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "pUno"
+            "img"
+            "pDos";
+    }
+
+    .tituloIndex {
+        font-size: 2rem;
+    }
+
+    /*shows*/
+    .tituloShows {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .showsLista {
+        font-size: 1.5rem;
+    }
+
+    /*discografía*/
+    .tituloDiscografia {
+        font-size: 2rem;
+    }
+    .pDiscografia{
+        font-size: 1.2rem;
+    }
+    /*galeria*/
+    .tituloGaleria{
+        font-size: 2rem;
+    }
+
+}
+
+@media screen and (min-width: 1020px) {
+
+    /*index*/
+    .mainIndex {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contenedorUnoIndex {
+        justify-content: start;
+        font-size: 1.2rem;
+    }
+
+    .contenedorDosIndex {
+        justify-content: end;
+    }
+
+    .imgOcultaIndex {
+        display: block;
+        height: 15rem;
+        width: 30rem;
+    }
+
+    /*shows*/
+    .tituloShows {
+        text-align: start;
+        margin-left: 2rem;
+    }
+
+    .imgShows {
+        width: 25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /*discografía*/
+    .pDiscografia{
+        font-size: 1.5rem;
+    }
+    .sectionDiscografia{
+        grid-template-columns: 1fr 1fr 1fr;   
+    }
+
+    /*galeria*/
+    .contenedorimagenes {
+        grid-template-areas: "bailando mdp quinto"
+            "lollaVeintidos redBull lollaDiecinueve";
+        justify-content: center;
+    }
+}
